@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 15:52:18 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 16:28:04 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 10:25:38 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:29:28 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	ch;
 	unsigned char	*str;
 
@@ -34,7 +36,8 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 int	main()
 {
 	char test[] = "AAA!!!IDEMO NIIIIS!!";
-	char *result = memchr(test, 'I', 20);
-	printf("%s", result);
+	char *result = ft_memchr(test, 'I', 20);
+	char *result1 = memchr(test, 'I', 20);
+	printf("Mine: %s\nFunction: %s\n", result, result1);
 }
 */

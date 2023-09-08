@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 18:39:36 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 12:09:59 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:30:04 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:43:59 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int		i;
+	size_t				i;
 	unsigned char		*dst;
 	const unsigned char	*source;
 
@@ -32,11 +34,10 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 
 int main () 
 {
-   char str1[] = "Cpp";
-   char str2[] = "Nuts Channel Is Back";
+	char str1[] = "Cpp";
+	char str2[] = "Nuts Channel Is Back";
 
-   puts(str2);
-   ft_memcpy(str2 + 2, str2, sizeof(char)*5);
-   puts(str2);
+	ft_memcpy(str1, str2, sizeof(char)*5);
+	printf("Mine: %s\n", str1);
 }
 */

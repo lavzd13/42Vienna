@@ -3,17 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 17:20:08 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/04 17:23:27 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:08:14 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:10:25 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int n)
+int	ft_isprint(int c)
 {
-	if (n < 32 || n > 126)
+	if (c < 32 || c > 126)
 		return (0);
 	else
-		return (1);
+		return (16384);
 }
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFucntion: %d", ft_isprint('\v'), isprint('\v'));
+}
+*/

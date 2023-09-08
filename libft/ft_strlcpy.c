@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 16:47:52 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 17:15:01 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:48:51 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:22:38 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+int	my_strlen(char *str)
 {
 	int	i;
 
@@ -22,13 +24,13 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	srclen;
+	size_t	i;
+	size_t	srclen;
 
 	i = 0;
-	srclen = ft_strlen((char *)src);
+	srclen = my_strlen((char *)src);
 	if (size != 0)
 	{
 		while (src[i] != '\0' && i < size - 1)
@@ -42,10 +44,12 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 }
 /*
 #include<stdio.h>
+#include<bsd/string.h>
 int main()
 {
 	char dst[] = "IDEMO ";
 	const char src[] = "NIIIS!";
-	printf("Function: %d\nDest.String:%s ",ft_strlcpy(dst, src, 10), dst);
+	printf("Mine: %zu\nDest.String: %s\n",ft_strlcpy(dst, src, 10), dst);
+	printf("Function: %zu\nDest.String: %s\n", strlcpy(dst, src, 10), dst);
 }
 */

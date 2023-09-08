@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 19:45:25 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 19:56:06 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 11:03:08 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:03:13 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int	ft1_strlen(char *str)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	str = (char *)s;
-	dest = (char *)malloc(ft_strlen(str) * (sizeof(char) + 1));
+	dest = (char *)malloc(ft1_strlen(str) * (sizeof(char) + 1));
 	if (dest == NULL)
 		return (NULL);
 	while (str[i] != '\0')
@@ -43,7 +43,6 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
 /*
 #include<stdio.h>
 #include<string.h>
@@ -51,6 +50,7 @@ int main()
 {
 	char source[] = "Hello";
 	char *target = ft_strdup(source);
-	printf("%s", target);
+	char *target2 = strdup(source);
+	printf("Mine: %s\nFucntion: %s\n", target, target2);
 }
 */

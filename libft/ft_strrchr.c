@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 11:43:57 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 12:17:52 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 10:18:50 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:28:36 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,20 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		return (str + index);
 }
-
 /*
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
-	char str[] = "https://www.tutorialspoint.com";
+	char str[] = "AAAA!AAAAA!AAAA!AAAA!AAAAAA!AAAA!IDEMO NIIIIS";
 	int ch = '.';
-	char *ret;
-	char *ret1;
+	char *r;
+	char *res;
 
-	ret = strrchr(str, ch);
-	ret1 = ft_strrchr(str, ch);
+	r = ft_strrchr(str, ch);
+	res = strrchr(str, ch);
 
-	printf("Function: %s\nMy function: %s", ret, ret1);
+	printf("Mine: %s\nFunction: %s\n", r, res);
 }
 */

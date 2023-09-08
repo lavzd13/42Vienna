@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 11:22:58 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 14:46:15 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 10:14:21 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:18:01 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,20 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
 /*
 #include<string.h>
 #include<stdio.h>
 
 int	main()
 {
-	const char str[] = "https://www.tutorialspoint.com";
-	int ch = '.';
-	char *ret;
+	const char str[] = "AAAAAAAAAAAA!IDEMO NIIIIS!";
+	int ch = '!';
+	char *r;
+	char *res;
 
-	ret = ft_strchr(str, ch);
+	r = ft_strchr(str, ch);
+	res = strchr(str, ch);
 
-	printf("String after |%c| is - |%s|\n", ch, ret);
+	printf("Mine: %s\nFunction: %s\n", r, res);
 }
 */

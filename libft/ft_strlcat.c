@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 15:27:25 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 12:07:33 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:54:15 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:03:40 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include <stddef.h>
+
+int	mystrlen(const char *str)
 {
 	int	i;
 
@@ -22,15 +24,16 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	destlen;
-	unsigned int	srclen;
-	unsigned int	destend;
+	size_t	i;
+	size_t	destlen;
+	size_t	srclen;
+	size_t	destend;
 
 	i = 0;
-	srclen = ft_strlen(src);
+	srclen = mystrlen(src);
+	destlen = 0;
 	while (dst[destlen] != '\0' && destlen < size)
 		++destlen;
 	destend = destlen;
@@ -49,21 +52,28 @@ unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 	return (destlen + srclen);
 }
 /*
-#include<string.h>
+#include<bsd/string.h>
 #include<stdio.h>
 int main()
 {
-    char first[] = "";
+    char first[] = "This is ";
     char last[] = "a potentially long string";
+	char first1[] = "This is ";
+	char last1[] = "a potentially long string";
     int r;
-    int size = 0;
+	int res;
+    int size = 16;
     char buffer[size];
+	char buffer1[size];
 
-    strcpy(buffer,first);
-    r = ft_strlcat(buffer,last,size);
+    strcpy(buffer, first);
+	strcpy(buffer1, first1);
+    r = ft_strlcat(buffer, last, size);
+	res = strlcat(buffer1, last1, size);
 
     puts(buffer);
-    printf("Value returned: %d\n",r);
+	puts(buffer1);
+    printf("Mine: %d\nFunction: %d\n", r, res);
     if( r > size )
         puts("String truncated");
     else

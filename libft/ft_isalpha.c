@@ -3,17 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:49:57 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/04 16:58:58 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:01:55 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:02:01 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int n)
+int	ft_isalpha(int c)
 {
-	if (n < 65 || n < 90 && n > 97 || n < 120)
-		return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1024);
 	else
-		return (1);
+		return (0);
 }
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFunction: %d", ft_isalpha('a'), isalpha('a'));
+}
+*/

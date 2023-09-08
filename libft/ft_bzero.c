@@ -3,20 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 18:13:19 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 18:26:40 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:25:42 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:07:27 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+#include <stddef.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	char			*str;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
-	str = (char *)s;
+	str = (unsigned char *)s;
 	while (i < n)
 	{
 		str[i] = '\0';
@@ -30,10 +32,14 @@ void	ft_bzero(void *s, unsigned int n)
 int main()
 {
     char str[] = "This is string.h library function";
+	char str1[] = "This is string.h library function";
 
     puts(str);
 
     ft_bzero(str, 7);
-    puts(str);
+    printf("Mine: %s\n", str);
+
+	bzero(str1, 7);
+	printf("Function: %s\n", str1);
 }
 */

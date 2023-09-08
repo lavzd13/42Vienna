@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 19:32:11 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 15:52:01 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:44:46 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:46:31 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dst;
 	const unsigned char	*source;

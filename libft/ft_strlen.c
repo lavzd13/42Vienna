@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:40:17 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 14:56:54 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 09:11:29 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:13:58 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,10 +24,12 @@ unsigned int	ft_strlen(const char *str)
 	return (i);
 }
 /*
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 int	main()
 {
 	int a = ft_strlen("Hello");
-	printf("%d", a);
+	int b = strlen("Hello");
+	printf("Mine: %d\nFunction: %d", a, b);
 }
 */

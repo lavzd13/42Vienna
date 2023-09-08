@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 13:54:04 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/06 13:01:15 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 10:41:13 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:06:18 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,18 @@ int	ft_atoi(const char *nptr)
 	}
 	return (number * sign);
 }
-
 /*
 #include<stdio.h>
 #include<stdlib.h>
 int main()
 {
-    int proba;
-    int moje;
-    char arr[] = "	  \v-14562314ab567";
+	int proba;
+	int moje;
+	char arr[] = "	  \v2147483647ab567";
 
-    proba = atoi(arr);
-    moje = ft_atoi(arr);
-    printf("String: %s\nInt atoi: %d\n", arr, proba);
-    printf("String: %s\nInt moje: %d", arr, moje);
+	proba = atoi(arr);
+	moje = ft_atoi(arr);
+	printf("String: %s\nInt atoi: %d\n", arr, proba);
+	printf("String: %s\nInt mine: %d\n", arr, moje);
 }
 */

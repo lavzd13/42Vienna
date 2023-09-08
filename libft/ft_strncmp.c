@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 12:38:47 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/05 14:09:22 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/08 10:23:24 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:24:48 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stddef.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
@@ -28,7 +30,7 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 #include<string.h>
 int main()
 {
-	char a[] = "test";
+	char a[] = "testb";
 	char b[] = "testa";
 	unsigned int n = 6;
 	int result1 = ft_strncmp(a, b, n);
