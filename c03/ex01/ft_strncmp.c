@@ -6,7 +6,7 @@
 /*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 12:54:13 by jlomic            #+#    #+#             */
-/*   Updated: 2023/07/15 22:21:31 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/05 12:56:55 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-/*
+
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-	char a[] = "BHVI$&gh2947gh-&^*svdj";
-	char b[] = "UJHVOIJW(*#)!*G0h108g1h";
-	unsigned int n = 12;
+	char a[] = "aaa";
+	char b[] = "aac";
+	unsigned int n = 2;
 	int result1 = ft_strncmp(a, b, n);
 	int result2 = strncmp(a, b, n);
 	printf("Mine:%d\nStrncmp: %d", result1, result2);
 }
-*/
+

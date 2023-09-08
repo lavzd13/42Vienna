@@ -6,7 +6,7 @@
 /*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 22:32:49 by jlomic            #+#    #+#             */
-/*   Updated: 2023/07/19 18:42:34 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/05 15:59:48 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[destlen + i] = '\0';
 	return (destlen + srclen);
 }
-/*
+
 #include<string.h>
 #include<stdio.h>
 int main()
@@ -48,6 +48,6 @@ int main()
 	
 	int r;
 	r = ft_strlcat(dest, src, size);
-	printf("Value returned: %d\nString: %s", r, dest);
+	int a = strlcat(dest, src, size);
+	printf("Value returned: %d\nString: %s\nFunction: %d", r, dest, a);
 }
-*/

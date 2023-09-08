@@ -6,7 +6,7 @@
 /*   By: jlomic <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 20:26:20 by jlomic            #+#    #+#             */
-/*   Updated: 2023/07/22 19:23:40 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/06 19:55:46 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
+
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -52,4 +52,4 @@ int main()
 	char *target = ft_strdup(source);
 	printf("%s", target);
 }
-*/
+
