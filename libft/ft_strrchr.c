@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:18:50 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 11:28:36 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/09 11:44:42 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strrchr(const char *s, int c)
 			index = i;
 		++i;
 	}
+	if (str[i] == c)
+		return (str + i);
 	if (index == -1)
 		return (0);
 	else

@@ -1,46 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 11:03:08 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/09 11:36:27 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/09 14:15:32 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 15:17:25 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*total;
+	size_t	size;
 	int		i;
-	char	*dest;
-	char	*str;
+	int		j;
 
 	i = 0;
-	str = (char *)s;
-	dest = (char *)malloc(ft_strlen(str) * sizeof(char) + 1);
-	if (dest == NULL)
-		return (NULL);
-	while (str[i] != '\0')
+	j = 0;
+	if (!s1 && s2)
+		return (0);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	total = (char *)malloc((size + 1) * sizeof(char));
+	if (total == NULL)
+		return (0);
+	while (s1[i] != '\0')
 	{
-		dest[i] = str[i];
+		total[i] = s1[i];
 		++i;
 	}
-	dest[i] = '\0';
-	return (dest);
+	while (s2[j] != '\0')
+	{
+		total[i + j] = s2[j];
+		++j;
+	}
+	total[i + j] = '\0';
+	return (total);
 }
-/*
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-	char source[] = "Hello";
-	char *target = ft_strdup(source);
-	char *target2 = strdup(source);
-	printf("Mine: %s\nFucntion: %s\n", target, target2);
-	
-}
-*/

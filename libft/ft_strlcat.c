@@ -6,23 +6,12 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:54:15 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 10:03:40 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/09 11:37:15 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-int	mystrlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		++i;
-	}
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -32,23 +21,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	destend;
 
 	i = 0;
-	srclen = mystrlen(src);
-	destlen = 0;
-	while (dst[destlen] != '\0' && destlen < size)
-		++destlen;
+	srclen = ft_strlen(src);
+	if (dst == 0 && size == 0)
+		return (0);
+	destlen = ft_strlen(dst);
 	destend = destlen;
-	if (destlen < size)
+	if (destend < size - 1 && size > 0)
 	{
-		while (src[i] != '\0' && i < size - 1 - destlen)
+		while (src[i] && i < size - 1 - destlen)
 		{
 			dst[destend] = src[i];
 			++destend;
 			++i;
-			if (destend == size - 1)
-				break ;
 		}
+		dst[destend] = '\0';
 	}
-	dst[destend] = '\0';
+	if (destlen >= size)
+		destlen = size;
 	return (destlen + srclen);
 }
 /*
@@ -56,7 +45,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 #include<stdio.h>
 int main()
 {
-    char first[] = "This is ";
+
+	char first[] = "This is ";
     char last[] = "a potentially long string";
 	char first1[] = "This is ";
 	char last1[] = "a potentially long string";
@@ -80,5 +70,23 @@ int main()
         puts("String was fully copied");
 
     return(0);
+
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+	char buff1[0xF00] = "there is no stars in the sky";
+	char buff2[0xF00] = "there is no stars in the sky";
+	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+
+	strlcat(buff1, str, max);
+	ft_strlcat(buff2, str, max);
+	if (!strcmp(buff1, buff2))
+		printf("TEST_SUCCESS\nFunction: %s\nMine: %s\n", buff1, buff2);
+	else
+		printf("TEST_FAILED\nFunction: %s\nMine: %s\n", buff1, buff2);
+
+
+	char b[0xF] = "nyan !";
+
+	ft_strlcat(((void*)0), b, 0);
+	printf("TEST_SUCCESS");
 }
 */

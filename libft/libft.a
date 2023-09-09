@@ -1,0 +1,1394 @@
+!<arch>
+ft_isalpha.c/   0           0     0     644     1131      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:01:55 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:02:01 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1024);
+	else
+		return (0);
+}
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFunction: %d", ft_isalpha('a'), isalpha('a'));
+}
+*/
+
+ft_isdigit.c/   0           0     0     644     1104      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:00:33 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:00:38 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (2048);
+	else
+		return (0);
+}
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFucntion: %d", ft_isdigit('5'), isdigit('5'));
+}
+*/
+ft_isalnum.c/   0           0     0     644     1134      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 08:59:31 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 10:16:22 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (8);
+	else
+		return (0);
+}
+
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFunction: %d", ft_isalnum(' '), isalnum(' '));
+}
+*/
+ft_isascii.c/   0           0     0     644     1103      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:04:25 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:07:06 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
+}
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFunction: %d", ft_isascii('4'), isascii('4'));
+}
+*/
+
+ft_isprint.c/   0           0     0     644     1108      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:08:14 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:10:25 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isprint(int c)
+{
+	if (c < 32 || c > 126)
+		return (0);
+	else
+		return (16384);
+}
+/*
+#include <stdio.h>
+#include <ctype.h>
+
+int	main()
+{
+	printf("Mine: %d\nFucntion: %d", ft_isprint('\v'), isprint('\v'));
+}
+*/
+ft_strlen.c/    0           0     0     644     1174      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:11:29 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 09:13:58 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		++i;
+	}
+	return (i);
+}
+/*
+#include <stdio.h>
+#include <string.h>
+int	main()
+{
+	int a = ft_strlen("Hello");
+	int b = strlen("Hello");
+	printf("Mine: %d\nFunction: %d", a, b);
+}
+*/
+ft_memset.c/    0           0     0     644     1568      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/05 17:15:51 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:18:28 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		str[i] = c;
+		++i;
+	}
+	return (s);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+
+int	main()
+{
+	char str[] = "This is string.h library function";
+	char str1[] = "This is string.h library function";
+	char buffer[5000];
+	char buffer1[5000];
+
+	
+	puts(str);
+	ft_memset(str, 'A', 4);
+	printf("Mine: %s\n", str);
+
+	memset(str1, 'A', 4);
+	printf("Function: %s\n", str1);
+
+	puts(buffer);
+    ft_memset(buffer, 'A', 4000);
+    printf("Mine: %s\n", buffer);
+
+    memset(buffer1, 'A', 4000);
+    printf("Function: %s\n", buffer1);
+}
+*/
+ft_bzero.c/     0           0     0     644     1351      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:25:42 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:07:27 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		str[i] = '\0';
+		++i;
+	}
+}
+/*
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[] = "This is string.h library function";
+	char str1[] = "This is string.h library function";
+
+    puts(str);
+
+    ft_bzero(str, 7);
+    printf("Mine: %s\n", str);
+
+	bzero(str1, 7);
+	printf("Function: %s\n", str1);
+}
+*/
+
+ft_memcpy.c/    0           0     0     644     1391      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:30:04 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 17:43:29 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t				i;
+	unsigned char		*dst;
+	const unsigned char	*source;
+
+	i = 0;
+	dst = (unsigned char *)dest;
+	source = (const unsigned char *)src;
+	if (!dest && !src)
+		return (0);
+	while (i < n)
+	{
+		dst[i] = source[i];
+		++i;
+	}
+	return (dest);
+}
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main () 
+{
+	char str1[] = "Cpp  ";
+	char str2[] = "Nuts Channel";
+
+	ft_memcpy(str1 , str2, 5);
+	printf("Mine: %s\n", str1);
+}
+*/
+
+ft_memmove.c/   0           0     0     644     1493      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:44:46 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:17:10 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char		*dst;
+	const unsigned char	*source;
+
+	dst = (unsigned char *)dest;
+	source = (const unsigned char *)src;
+	if (!dest && !src)
+		return (0);
+	if (dest <= src)
+	{
+		while (n--)
+		{
+			*dst++ = *source++;
+		}
+	}
+	else if (dest > src)
+	{
+		dst += n - 1;
+		source += n - 1;
+		while (n > 0)
+		{
+			*dst-- = *source--;
+			n--;
+		}
+	}
+	return (dest);
+}
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main()
+{
+	char dest[] = "This is a string";
+	ft_memmove(dest + 5, dest, 4);
+	printf("Destination: %s", dest);
+}
+*/
+
+ft_strlcpy.c/   0           0     0     644     1459      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:48:51 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:37:47 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	srclen;
+
+	i = 0;
+	srclen = ft_strlen((char *)src);
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < size - 1)
+		{
+			dst[i] = src[i];
+			++i;
+		}
+		dst[i] = '\0';
+	}
+	return (srclen);
+}
+/*
+#include<stdio.h>
+#include<bsd/string.h>
+int main()
+{
+	char dst[] = "IDEMO ";
+	const char src[] = "NIIIS!";
+	printf("Mine: %zu\nDest.String: %s\n",ft_strlcpy(dst, src, 10), dst);
+	printf("Function: %zu\nDest.String: %s\n", strlcpy(dst, src, 10), dst);
+}
+*/
+
+ft_strlcat.c/   0           0     0     644     2582      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 09:54:15 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:37:15 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	destlen;
+	size_t	srclen;
+	size_t	destend;
+
+	i = 0;
+	srclen = ft_strlen(src);
+	if (dst == 0 && size == 0)
+		return (0);
+	destlen = ft_strlen(dst);
+	destend = destlen;
+	if (destend < size - 1 && size > 0)
+	{
+		while (src[i] && i < size - 1 - destlen)
+		{
+			dst[destend] = src[i];
+			++destend;
+			++i;
+		}
+		dst[destend] = '\0';
+	}
+	if (destlen >= size)
+		destlen = size;
+	return (destlen + srclen);
+}
+/*
+#include<bsd/string.h>
+#include<stdio.h>
+int main()
+{
+
+	char first[] = "This is ";
+    char last[] = "a potentially long string";
+	char first1[] = "This is ";
+	char last1[] = "a potentially long string";
+    int r;
+	int res;
+    int size = 16;
+    char buffer[size];
+	char buffer1[size];
+
+    strcpy(buffer, first);
+	strcpy(buffer1, first1);
+    r = ft_strlcat(buffer, last, size);
+	res = strlcat(buffer1, last1, size);
+
+    puts(buffer);
+	puts(buffer1);
+    printf("Mine: %d\nFunction: %d\n", r, res);
+    if( r > size )
+        puts("String truncated");
+    else
+        puts("String was fully copied");
+
+    return(0);
+
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+	char buff1[0xF00] = "there is no stars in the sky";
+	char buff2[0xF00] = "there is no stars in the sky";
+	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+
+	strlcat(buff1, str, max);
+	ft_strlcat(buff2, str, max);
+	if (!strcmp(buff1, buff2))
+		printf("TEST_SUCCESS\nFunction: %s\nMine: %s\n", buff1, buff2);
+	else
+		printf("TEST_FAILED\nFunction: %s\nMine: %s\n", buff1, buff2);
+
+
+	char b[0xF] = "nyan !";
+
+	ft_strlcat(((void*)0), b, 0);
+	printf("TEST_SUCCESS");
+}
+*/
+ft_toupper.c/   0           0     0     644     1122      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:06:36 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:08:04 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
+}
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
+{
+	int b = 'a';
+	printf("Function:%d\nMy function:%d", toupper(b), ft_toupper(b));
+}
+*/
+ft_tolower.c/   0           0     0     644     1123      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:08:49 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:09:55 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
+}
+/*
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
+{
+	int	b = '5';
+	printf("Function: %d\nMy function: %d", tolower(b), ft_tolower(b));
+}
+*/
+
+ft_strchr.c/    0           0     0     644     1678      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:14:21 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 21:03:54 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strchr(const char *s, int c)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (str + i);
+		++i;
+	}
+	if (str[i] == c)
+		return (str + i);
+	return (0);
+}
+
+//#include<stdio.h>
+//#include<string.h>
+//int	main()
+//{
+//
+//	const char str[] = "AAAAAAAAAAAA!IDEMO NIIIIS!";
+//	int ch = '!';
+//	char *r;
+//	char *res;
+//
+//	r = ft_strchr(str, ch);
+//	res = strchr(str, ch);
+//
+//	printf("Mine: %s\nFunction: %s\n", r, res);
+//
+//	char *src = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+//	char *d1 = strchr(src, '\0');
+//	char *d2 = ft_strchr(src, '\0');
+//
+//	if (d1 == d2)
+//		printf("TEST_SUCCESS\nMine: %s\nFucntion: %s\n", d2, d1);
+//	else
+//		printf("TEST_FAILED\nMine: %s\nFunction: %s\n", d2, d1);
+//
+//}
+ft_strrchr.c/   0           0     0     644     1438      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:18:50 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:44:42 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
+	int		index;
+	char	*str;
+
+	i = 0;
+	index = -1;
+	str = (char *)s;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			index = i;
+		++i;
+	}
+	if (str[i] == c)
+		return (str + i);
+	if (index == -1)
+		return (0);
+	else
+		return (str + index);
+}
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main()
+{
+	char str[] = "AAAA!AAAAA!AAAA!AAAA!AAAAAA!AAAA!IDEMO NIIIIS";
+	int ch = '.';
+	char *r;
+	char *res;
+
+	r = ft_strrchr(str, ch);
+	res = strrchr(str, ch);
+
+	printf("Mine: %s\nFunction: %s\n", r, res);
+}
+*/
+ft_strncmp.c/   0           0     0     644     1380      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:23:24 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:40:15 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		++i;
+	}
+	return (0);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[] = "";
+	char b[] = "";
+	unsigned int n = 0;
+	int result1 = ft_strncmp(a, b, n);
+	int result2 = strncmp(a, b, n);
+	printf("Mine:%d\nStrncmp: %d", result1, result2);
+}
+*/ft_memchr.c/    0           0     0     644     1365      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:25:38 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 19:21:27 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		if (str[i] == (unsigned char)c)
+			return (str + i);
+		++i;
+	}
+	return (0);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+
+int	main()
+{
+	char test[] = "AAA!!!IDEMO NIIIIS!!";
+	char *result = ft_memchr(test, 'I', 20);
+	char *result1 = memchr(test, 'I', 20);
+	printf("Mine: %s\nFunction: %s\n", result, result1);
+}
+*/
+
+ft_memcmp.c/    0           0     0     644     1428      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:31:39 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 10:35:27 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	const unsigned char	*str1;
+	const unsigned char	*str2;
+
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	while (n--)
+	{
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
+	}
+	return (0);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+int	main()
+{
+	char str1[] = "aaaaaa";
+	char str2[] = "@ABCDEF";
+	int res = ft_memcmp(str1, str2, 5);
+	int res1 = memcmp(str1, str2, 5);
+	printf("Mine: %d\nFunction: %d", res, res1);
+}
+*/
+ft_strnstr.c/   0           0     0     644     1886      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:36:30 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 21:25:54 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (little[j] == '\0')
+		return ((char *)big);
+	while (i < len && big[i])
+	{
+		j = 0;
+		while (big[i + j] == little[j] && big[i + j] && i + j < len)
+			++j;
+		if (little[j] == '\0')
+			return ((char *)big + i);
+		++i;
+	}
+	return (0);
+}
+/*
+#include<bsd/string.h>
+#include<stdio.h>
+
+int	main()
+{
+
+	char str[] = "Hel@#^^()*-1lo";
+	char to_find[] = "^^";
+	char str1[] = "Hel@#^^()*-1lo";
+	char to_find1[] = "^^";
+
+	char *result1 = ft_strnstr(str, to_find, 10);
+    char *result2 = strnstr(str1, to_find1, 10);
+
+	printf("Mine: %s\nFunction: %s\n", result1, result2);
+
+	char *s1 = "MZIRIBMZIRIBMZE123";
+	char *s2 = "MZIRIBMZE";
+	size_t max = strlen(s2);
+	char *i1 = strnstr(s1, s2, max);
+	char *i2 = ft_strnstr(s1, s2, max);
+
+	if (i1 == i2)
+		printf("TEST_SUCCESS\nMine: %s\nFunction: %s\n", i2, i1);
+	else
+		printf("TEST_FAILED\nMine: %s\nFunction: %s\n", i2, i1);
+}
+*/
+ft_atoi.c/      0           0     0     644     1749      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:41:13 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 11:06:18 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	idemo_nis(int *p, char *string)
+{
+	int	i;
+	int	minus;
+
+	i = 0;
+	minus = 1;
+	while ((string[i] >= 9 && string[i] <= 13) || string[i] == 32)
+		++i;
+	if (string[i] == '-' || string[i] == '+')
+	{
+		if (string[i] == '-')
+			minus *= -1;
+		++i;
+	}
+	*p = i;
+	return (minus);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int		i;
+	int		number;
+	int		sign;
+	char	*str;
+
+	number = 0;
+	str = (char *)nptr;
+	sign = idemo_nis(&i, str);
+	if (str[i] < 48 || str[i] > 57)
+		return (0);
+	while (str[i] >= 48 && str[i] <= 57 && str[i])
+	{
+		number = (number * 10) + (str[i] - 48);
+		++i;
+	}
+	return (number * sign);
+}
+/*
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int proba;
+	int moje;
+	char arr[] = "	  \v2147483647ab567";
+
+	proba = atoi(arr);
+	moje = ft_atoi(arr);
+	printf("String: %s\nInt atoi: %d\n", arr, proba);
+	printf("String: %s\nInt mine: %d\n", arr, moje);
+}
+*/
+
+ft_calloc.c/    0           0     0     644     1895      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 10:45:14 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/08 22:19:42 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	size_t	nb;
+	void	*p;
+
+	nb = nmemb * size;
+	if (nmemb != 0 && size != 0 && (nb / nmemb != size))
+		return (NULL);
+	p = malloc(nb);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, nb);
+	return (p);
+}
+/*
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+int main()
+{
+    int *ptr;
+	int n, i;
+
+    n = 20;
+
+    ptr = (int*)ft_calloc(n, sizeof(int));
+
+    if (ptr == NULL)
+	{
+        printf("Memory not allocated.\n");
+        exit(0);
+    }
+    else 
+	{
+        for (i = 0; i < n; ++i)
+		{
+            printf("%d,", ptr[i]);
+        }
+    }
+
+    return 0;
+
+	int size = 8539;
+
+	void * d1 = ft_calloc(size, sizeof(int));
+	void * d2 = calloc(size, sizeof(int));
+	if (memcmp(d1, d2, size * sizeof(int)))
+		printf("TEST_FAILED");
+	else
+	{
+		free(d1);
+		free(d2);
+		printf("TEST_SUCCESS");
+	}
+
+	void *str = ft_calloc(0, 0);
+
+	if (str == ((void*)0))
+		printf("TEST_FAILED");
+	else
+{
+		free(str);
+		printf("TEST_SUCCESS");
+}
+}
+*/
+
+ft_strdup.c/    0           0     0     644     1420      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 11:03:08 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 11:36:27 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	char	*dest;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	dest = (char *)malloc(ft_strlen(str) * sizeof(char) + 1);
+	if (dest == NULL)
+		return (NULL);
+	while (str[i] != '\0')
+	{
+		dest[i] = str[i];
+		++i;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char source[] = "Hello";
+	char *target = ft_strdup(source);
+	char *target2 = strdup(source);
+	printf("Mine: %s\nFucntion: %s\n", target, target2);
+	
+}
+*/ft_substr.c/    0           0     0     644     1731      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 12:42:42 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 14:14:58 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	j;
+	char	*string;
+
+	i = 0;
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	string = (char *)malloc((len + 1) * sizeof(char));
+	if (string == NULL)
+		return (NULL);
+	while (s[i] && i < start)
+		++i;
+	while (s[i] && j < len)
+	{
+		string[j] = s[i];
+		++i;
+		++j;
+	}
+	string[j] = '\0';
+	return (string);
+}
+/*
+#include<stdio.h>
+#include<string.h>
+int	main()
+{
+	char *str = "i just want this part #############";
+	size_t size = 22;
+	char *ret = ft_substr(str, 0, size);
+
+	printf("%s\n", ret);
+	if (!strncmp(ret, str, size))
+	{
+		free(ret);
+		printf("TEST_SUCCESS\nString: %s", ret);
+	}
+	else
+	{
+		free(ret);
+		printf("TEST_FAILED\nString: %s", ret);
+	}
+	
+	char *str = "geeksaaaaaaa";
+	printf("%s", ft_substr(str, 3, 3));
+}
+*/
+
+ft_strjoin.c/   0           0     0     644     1358      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 14:15:32 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 15:17:25 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*total;
+	size_t	size;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (!s1 && s2)
+		return (0);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	total = (char *)malloc((size + 1) * sizeof(char));
+	if (total == NULL)
+		return (0);
+	while (s1[i] != '\0')
+	{
+		total[i] = s1[i];
+		++i;
+	}
+	while (s2[j] != '\0')
+	{
+		total[i + j] = s2[j];
+		++j;
+	}
+	total[i + j] = '\0';
+	return (total);
+}
+ft_strtrim.c/   0           0     0     644     1595      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 14:41:49 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 16:07:26 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
+#include "libft.h"
+
+int	set_check(char const s, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == s)
+			return (1);
+		++i;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	beg;
+	size_t	end;
+	size_t	i;
+	char	*string;
+
+	if (s1 == NULL)
+		return (NULL);
+	beg = 0;
+	while (s1[beg] && set_check(s1[beg], set))
+		++beg;
+	end = ft_strlen(s1);
+	while (end > beg && set_check(s1[end - 1], set))
+		--end;
+	string = (char *)malloc((end - beg + 1) * sizeof(*s1));
+	if (string == NULL)
+		return (NULL);
+	i = 0;
+	while (beg < end)
+	{
+		string[i] = s1[beg];
+		++beg;
+		++i;
+	}
+	string[i] = '\0';
+	return (string);
+}
+
+ft_split.c/     0           0     0     644     2828      `
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 18:11:01 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/09 19:31:21 by jlomic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
+#include "libft.h"
+
+int	c_check(char const s, char const c)
+{
+	if (s == c)
+		return (1);
+	else
+		return (0);
+}
+
+int	count(char const *str, char const c)
+{
+	size_t	i;
+	size_t	count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] != '\0' && c_check(str[i], c))
+			++i;
+		if (str[i] != '\0')
+			++count;
+		while (str[i] != '\0' && !c_check(str[i], c))
+			++i;
+	}
+	return (count);
+}
+
+int	ftsp_strlen(char const *str, char const c)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i]  && !c_check(str[i], c))
+		++i;
+	return (i);
+}
+
+char *ft_word(char const *str, char const c)
+{
+	size_t	i;
+	size_t	len;
+	char	*word;
+
+	i = 0;
+	len = ftsp_strlen(str, c);
+	word = (char *)malloc((len + 1) * sizeof (char));
+	if (!word)
+		return (NULL);
+	while (i < len)
+	{
+		word[i] = str[i];
+		++i;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	char	**array;
+	
+	i = 0;
+	j = 0;
+	if (!s)
+		return (NULL);
+	array = (char **)malloc((count(s, c) + 1) * sizeof(char const));
+	if (!array)
+		return (NULL);
+	while (s[j] != '\0')
+	{
+		while (s[j] != '\0' && c_check(s[j], c))
+			++j;
+		if (s[j] != '\0')
+		{
+			array[i] = ft_word(&s[j], c);
+			++i;
+		}
+		while (s[j] != '\0' && !c_check(s[j], c))
+			++j;
+	}
+	array[i] = 0;
+	return (array);
+}
+/*
+#include <stdio.h>
+int main()
+{
+    char *arr = "      split       this for   me  !       ";
+    char c = ' ';
+    char **strings = ft_split(arr, c);
+    int i;
+
+    i = 0;
+    while (strings[i] != 0)
+    {
+        printf("%s\n", strings[i]);
+        ++i;
+    }
+	
+	char *s = "      split       this for   me  !       ";
+
+	char **result = ft_split(s, ' ');
+	if (!result)
+	{
+		printf("TEST_SUCCESS\n");
+		for (int i = 0; result[i] != 0; ++i)
+			printf("%s\n", result[i]);
+	}
+	else
+	{
+		printf("TEST_FAILED\n");
+		for (int i = 0; result[i] != 0; ++i)
+            printf("%s\n", result[i]);
+	}
+	printf("%s\n", result[0]);
+	
+}
+*/

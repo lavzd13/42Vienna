@@ -6,36 +6,31 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:45:14 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 11:39:42 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/08 22:19:42 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			nb;
-	unsigned char	*p;
-	unsigned char	*q;
-	size_t			i;
+	size_t	nb;
+	void	*p;
 
-	i = 0;
 	nb = nmemb * size;
-	if (nb > 2147483647 || nmemb == 0 || size == 0)
+	if (nmemb != 0 && size != 0 && (nb / nmemb != size))
 		return (NULL);
 	p = malloc(nb);
-	q = malloc(nb);
-	if (p == NULL)
+	if (!p)
 		return (NULL);
-	while (i < nb)
-	{
-		*p++ = 0;
-		i++;
-	}
-	return (q);
+	ft_bzero(p, nb);
+	return (p);
 }
 /*
 #include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
 
 int main()
 {
@@ -60,5 +55,28 @@ int main()
     }
 
     return 0;
+
+	int size = 8539;
+
+	void * d1 = ft_calloc(size, sizeof(int));
+	void * d2 = calloc(size, sizeof(int));
+	if (memcmp(d1, d2, size * sizeof(int)))
+		printf("TEST_FAILED");
+	else
+	{
+		free(d1);
+		free(d2);
+		printf("TEST_SUCCESS");
+	}
+
+	void *str = ft_calloc(0, 0);
+
+	if (str == ((void*)0))
+		printf("TEST_FAILED");
+	else
+{
+		free(str);
+		printf("TEST_SUCCESS");
+}
 }
 */

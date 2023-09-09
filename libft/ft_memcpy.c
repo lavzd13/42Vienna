@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:30:04 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 09:43:59 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/08 17:43:29 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	dst = (unsigned char *)dest;
 	source = (const unsigned char *)src;
+	if (!dest && !src)
+		return (0);
 	while (i < n)
 	{
 		dst[i] = source[i];
@@ -34,10 +36,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 int main () 
 {
-	char str1[] = "Cpp";
-	char str2[] = "Nuts Channel Is Back";
+	char str1[] = "Cpp  ";
+	char str2[] = "Nuts Channel";
 
-	ft_memcpy(str1, str2, sizeof(char)*5);
+	ft_memcpy(str1 , str2, 5);
 	printf("Mine: %s\n", str1);
 }
 */

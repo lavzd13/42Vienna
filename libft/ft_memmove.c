@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 09:44:46 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 09:46:31 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/09 11:17:10 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main()
 {
 	char dest[] = "This is a string";
-	ft_memmove(dest + 5, dest, 5);
+	ft_memmove(dest + 5, dest, 4);
 	printf("Destination: %s", dest);
 }
 */
