@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:11:01 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/09 19:32:03 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/10 15:23:05 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	if (!s)
 		return (NULL);
-	array = (char **)malloc((count(s, c) + 1) * sizeof(char const));
+	array = (char **)malloc((count(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
 	while (s[j] != '\0')
@@ -103,8 +103,8 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 int main()
 {
-    char *arr = "      split       this for   me  !       ";
-    char c = ' ';
+    char *arr = "  tripouille  42  ";
+	char c = ' ';
     char **strings = ft_split(arr, c);
     int i;
 
@@ -132,5 +132,4 @@ int main()
 	}
 	printf("%s\n", result[0]);
 	
-}
-*/
+}*/

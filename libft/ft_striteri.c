@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 10:25:38 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/10 15:34:39 by jlomic           ###   ########.fr       */
+/*   Created: 2023/09/10 14:00:54 by jlomic            #+#    #+#             */
+/*   Updated: 2023/09/10 14:20:27 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t			i;
-	unsigned char	*str;
+	size_t	i;
+	size_t	size;
 
 	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
+	if (!s)
+		return ;
+	size = ft_strlen(s);
+	while (i < size)
 	{
-		if (str[i] == (unsigned char)c)
-			return ((void *)(str + i));
+		(*f)(i, &s[i]);
 		++i;
 	}
-	return (0);
 }
-/*
-#include<stdio.h>
-#include<string.h>
-
-int	main()
-{
-	char test[] = "AAA!!!IDEMO NIIIIS!!";
-	char *result = ft_memchr(test, 'I', 20);
-	char *result1 = memchr(test, 'I', 20);
-	printf("Mine: %s\nFunction: %s\n", result, result1);
-}
-*/

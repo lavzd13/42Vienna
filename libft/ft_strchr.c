@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:14:21 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 21:03:54 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/10 15:35:45 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (str[i] != '\0')
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 			return (str + i);
 		++i;
 	}
