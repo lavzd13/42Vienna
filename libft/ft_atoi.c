@@ -6,11 +6,11 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:41:13 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/08 11:06:18 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/11 16:37:25 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	idemo_nis(int *p, char *string)
+static int	idemo_nis(int *p, char *string)
 {
 	int	i;
 	int	minus;

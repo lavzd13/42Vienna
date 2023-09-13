@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:41:49 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/09 16:07:26 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/09/11 16:37:27 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	set_check(char const s, char const *set)
+static int	set_check(char const s, char const *set)
 {
 	size_t	i;
 
