@@ -27,7 +27,7 @@ $(NAME): $(OBJECTS)
 clean:
 	@$(RM) -rf $(OBJECTS)
 	@make clean --no-print-directory -C $(LIBFT)
-	@echo $(COLOUR_RED)"🗑Removed all objects files.🗑"$(END_COLOUR)
+	@echo 🗑$(COLOUR_RED)" Removed all objects files."$(END_COLOUR)🗑
 
 fclean:
 	@$(RM) -rf $(OBJECTS)
