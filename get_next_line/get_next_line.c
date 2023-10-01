@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 17:26:25 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/27 22:29:02 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/10/01 13:23:52 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char	*ft_read(char *buffer, int fd)
 	if (!buffer)
 	{
 		buffer = malloc(1);
+		if (!buffer)
+			return (NULL);
 		*buffer = 0;
 	}
 	bytesread = 1;
@@ -107,7 +109,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 }
 
-/* #include <stdio.h>
+#include <stdio.h>
 #include <fcntl.h>
 
 int	main()
@@ -123,4 +125,5 @@ int	main()
 		free(tmp);
 		i++;
 	}
-} */
+	close(fd);
+}
