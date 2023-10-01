@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 11:41:03 by jlomic            #+#    #+#             */
-/*   Updated: 2023/09/25 20:14:42 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/10/01 13:51:55 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i] != '\0')
 		i++;
 	return (i);
@@ -60,7 +62,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (0);
 	size = ft_strlen(s1) + ft_strlen(s2);
 	total = (char *)malloc((size + 1) * sizeof(char));

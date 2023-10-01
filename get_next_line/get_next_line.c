@@ -6,7 +6,7 @@
 /*   By: jlomic <jlomic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 17:26:25 by jlomic            #+#    #+#             */
-/*   Updated: 2023/10/01 13:23:52 by jlomic           ###   ########.fr       */
+/*   Updated: 2023/10/01 14:08:22 by jlomic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,13 +66,6 @@ char	*ft_read(char *buffer, int fd)
 	char	*temp;
 	ssize_t	bytesread;
 
-	if (!buffer)
-	{
-		buffer = malloc(1);
-		if (!buffer)
-			return (NULL);
-		*buffer = 0;
-	}
 	bytesread = 1;
 	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!temp)
@@ -98,6 +91,13 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	if (!buffer)
+	{
+		buffer = malloc(1);
+		if (!buffer)
+			return (NULL);
+		*buffer = 0;
+	}
 	buffer = ft_read(buffer, fd);
 	if (buffer)
 	{
@@ -109,16 +109,16 @@ char	*get_next_line(int fd)
 		return (NULL);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <fcntl.h>
 
 int	main()
 {
 	int		fd = open("test.txt", O_RDWR);
-	int		i = 0;
+	int		i = 1;
 	char	*tmp;
 
-	while (i < 1)
+	while (i <= 4)
 	{
 		tmp = get_next_line(fd);
 		printf("%s", tmp);
@@ -126,4 +126,4 @@ int	main()
 		i++;
 	}
 	close(fd);
-}
+} */
