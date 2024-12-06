@@ -1,0 +1,5 @@
+So in ex02 Form class needs to be abstract class AForm. But we do not need to make all the functions in the class pure virtual because they are saying that derived classes will take only one parameter and to create form we would need 3 parameters.
+Also derived classes needs to perform some sort of action. So that means that we will need to make a pure virtual function in our base class so that we can change this function through other classes and with that pure virtual function our AForm class will be abstract class, because definition of abstract class is class that have at least one pure virtual function.
+So requriments:
+1. One pure virtual function for performing actions of classes.
+2. Execute function to execute form which doesn't need to be virtual
