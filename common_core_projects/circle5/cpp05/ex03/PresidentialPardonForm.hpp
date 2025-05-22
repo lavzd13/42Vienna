@@ -1,0 +1,16 @@
+#pragma once
+
+#include <iostream>
+#include "Form.hpp"
+
+class PresidentialPardonForm: public Form {
+	private:
+		std::string	_target;
+		void	classExecution() const;
+	public:
+		PresidentialPardonForm();
+		PresidentialPardonForm(const std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm &copy);
+		PresidentialPardonForm& operator=(const PresidentialPardonForm &copy);
+		~PresidentialPardonForm();
+};
