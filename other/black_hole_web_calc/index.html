@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>42 Black Hole Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="black_hole">
+		<div class="container_date">
+			<label class="date" for="start_date">Please enter the start date of your CC:</label>
+			<input type="date" id="date_input">
+		</div>
+		<div class="container_days">
+			<label class="days" for="bonus_days">Please enter the number of used bonus and freeze days combined:</label>
+			<input type="number" id="days_input" max="180" min="0">
+		</div>
+		<div class="container_circle">
+			<label class="circle" for="circle">Select your current circle:</label>
+			<select class="select" name="circle" id="circle_value">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+		</div>
+		<p class="sub_button"><input class="styled" type="button" value="Calculate" id="submit"></p>
+		<p class="result" id="result"></p>
+		<script src="script.js" defer></script>
+	</body>
+</html>

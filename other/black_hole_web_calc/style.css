@@ -1,0 +1,118 @@
+body {
+	color: white;
+	background-color: #181818;
+	height: 80vh;             /* take full screen height */
+}
+
+.black_hole {
+	margin-right: 130px;
+}
+
+.container_date {
+	margin-top: 150px;
+	display: flex;
+	justify-content: center;   /* horizontal centering */
+	align-items: center;
+	flex-direction: row;
+}
+
+.date {
+	margin-right: 10px;
+	font-size: 25px;
+}
+
+#date_input {
+	height: 30px;
+	background-color: lightgray;
+}
+
+.container_days {
+	margin-top: 100px;
+	margin-left: 232px;
+	display: flex;
+	justify-content: center;   /* horizontal centering */
+	align-items: center;
+	flex-direction: row;
+}
+
+.days {
+	font-size: 25px;
+	margin-right: 10px;
+}
+
+#days_input {
+	width: 80px;
+	height: 30px;
+	background-color: lightgray;
+}
+
+.container_circle {
+	margin-top: 100px;
+	margin-right: 170px;
+	display: flex;
+	justify-content: center;   /* horizontal centering */
+	align-items: center;
+	flex-direction: row;
+}
+
+.circle {
+	color: white;
+	font-size: 25px;
+	margin-right: 5px;       /* space between label and dropdown */
+}
+
+.select {
+	text-align: center;
+	height: 30px;
+	width: 80px;
+	background-color: lightgray;
+	color: black;
+}
+
+.sub_button {
+	display: flex;
+	justify-content: center;   /* horizontal centering */
+	align-items: center;
+}
+
+.styled {
+	width: 200px;
+	margin-top: 50px;
+	font-size: 20px;
+	border: 0;
+	line-height: 2.5;
+	padding: 0 20px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 10px;
+	background-color: rgb(87, 7, 7);
+	background-image: linear-gradient(
+		to top left,
+		rgb(0 0 0 / 20%),
+		rgb(0 0 0 / 20%) 30%,
+		rgb(0 0 0 / 0%)
+	);
+	box-shadow:
+		inset 2px 2px 3px rgb(255 255 255 / 60%),
+		inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+	background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+	box-shadow:
+		inset -2px -2px 3px rgb(255 255 255 / 60%),
+		inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+
+.result {
+	color: orange;
+	margin-top: 40px;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;   /* horizontal centering */
+	align-items: center;
+}
