@@ -1,7 +1,7 @@
 body {
 	color: white;
 	background-color: #181818;
-	height: 80vh;             /* take full screen height */
+	height: 80vh;
 }
 
 .black_hole {
@@ -11,7 +11,7 @@ body {
 .container_date {
 	margin-top: 150px;
 	display: flex;
-	justify-content: center;   /* horizontal centering */
+	justify-content: center;
 	align-items: center;
 	flex-direction: row;
 }
@@ -30,7 +30,7 @@ body {
 	margin-top: 100px;
 	margin-left: 232px;
 	display: flex;
-	justify-content: center;   /* horizontal centering */
+	justify-content: center;
 	align-items: center;
 	flex-direction: row;
 }
@@ -50,7 +50,7 @@ body {
 	margin-top: 100px;
 	margin-right: 170px;
 	display: flex;
-	justify-content: center;   /* horizontal centering */
+	justify-content: center;
 	align-items: center;
 	flex-direction: row;
 }
@@ -58,7 +58,7 @@ body {
 .circle {
 	color: white;
 	font-size: 25px;
-	margin-right: 5px;       /* space between label and dropdown */
+	margin-right: 5px;
 }
 
 .select {
@@ -71,7 +71,7 @@ body {
 
 .sub_button {
 	display: flex;
-	justify-content: center;   /* horizontal centering */
+	justify-content: center;
 	align-items: center;
 }
 
@@ -113,6 +113,15 @@ body {
 	margin-top: 40px;
 	font-size: 25px;
 	display: flex;
-	justify-content: center;   /* horizontal centering */
+	justify-content: center;
+	align-items: center;
+}
+
+.result_date {
+	color: orangered;
+	margin-top: 40px;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
