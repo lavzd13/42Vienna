@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Limiting the user input for freeze/bonus days
 	daysInput.addEventListener("input", () => {
-	if (daysInput.value > 180) daysInput.value = 180;
+	if (daysInput.value > 216) daysInput.value = 216;
 	if (daysInput.value < 0) daysInput.value = 0;
 	});
 });
